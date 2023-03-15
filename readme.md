@@ -1,4 +1,4 @@
-# Simple Snap Go - Midtrans
+# Simple Snap Midtrans - Golang
 Simple package to connect your golang app with midtrans.
 
 **Development by:** 
@@ -6,14 +6,14 @@ Simple package to connect your golang app with midtrans.
 
 ## Import
 ```shell
-go get github.com/Findryankp/snapGoMidtrans
+go get github.com/Findryankp/snapMidtransGo
 ```
 
 ## Post your data
 all data must be required
 
 ```go
-var postData = snapGoMidtrans.DataPostMidtrans{
+var postData = snapMidtransGo.DataPostMidtrans{
     OrderId:   "order-001",
     Nominal:   1000,
     FirstName: "findryan",
@@ -28,19 +28,19 @@ to call function request transaction
 - Production
 ```go
 //request transaction
-snapGoMidtrans.RequestSnapMidtrans(postData)
+snapMidtransGo.RequestSnapMidtrans(postData)
 
 //get status transaction
-snapGoMidtrans.GetTransaction(postData)
+snapMidtransGo.GetTransaction(postData)
 ```
 
 - Sandbox
 ```go
 //request transaction
-snapGoMidtrans.SanboxRequestSnapMidtrans(postData)
+snapMidtransGo.SanboxRequestSnapMidtrans(postData)
 
 //get status transaction
-snapGoMidtrans.SanboxGetTransaction(postData)
+snapMidtransGo.SanboxGetTransaction(postData)
 ```
 
 

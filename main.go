@@ -1,4 +1,4 @@
-package snapGoMidtrans
+package snapMidtransGo
 
 import (
 	"bytes"

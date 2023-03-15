@@ -1,3 +1,3 @@
-module github.com/Findryankp/snapGoMidtrans
+module snapMidtransGo
 
 go 1.20
