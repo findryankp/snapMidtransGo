@@ -36,7 +36,7 @@ func main() {
 
 	fmt.Println(paymenLink)
 
-	//send your transaction
+	//get data from your transaction
 	dataPayment, err2 := snapMidtransGo.GetTransaction(postData)
 	if err2 != nil {
 		panic(err2.Error())
