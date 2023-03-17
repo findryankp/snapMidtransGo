@@ -9,6 +9,43 @@ Simple package to connect your golang app with midtrans.
 go get github.com/Findryankp/snapMidtransGo
 ```
 
+## Example
+```go
+import (
+	"fmt"
+
+	"github.com/Findryankp/snapMidtransGo"
+)
+
+func main() {
+	var postData = snapMidtransGo.DataPostMidtrans{
+		OrderId:   "order-001",
+		Nominal:   1000,
+		FirstName: "findryan",
+		LastName:  "kurnia",
+		Email:     "findryankp@gmail.com",
+		Phone:     "081*******",
+		ServerKey: "key server from midtrans",
+	}
+
+	//send your transaction
+	paymenLink, err1 := snapMidtransGo.RequestSnapMidtrans(postData)
+	if err1 != nil {
+		panic(err1.Error())
+	}
+
+	fmt.Println(paymenLink)
+
+	//send your transaction
+	dataPayment, err2 := snapMidtransGo.GetTransaction(postData)
+	if err2 != nil {
+		panic(err2.Error())
+	}
+
+	fmt.Println(dataPayment)
+}
+```
+
 ## Post your data
 all data must be required
 
@@ -64,40 +101,3 @@ bad request
 4. Server Key
    - if you use sandbox, choose sandbox server key
    - likewise if you choose production choose server key production
-
-## Example
-```go
-import (
-	"fmt"
-
-	"github.com/Findryankp/snapMidtransGo"
-)
-
-func main() {
-	var postData = snapMidtransGo.DataPostMidtrans{
-		OrderId:   "order-001",
-		Nominal:   1000,
-		FirstName: "findryan",
-		LastName:  "kurnia",
-		Email:     "findryankp@gmail.com",
-		Phone:     "081*******",
-		ServerKey: "key server from midtrans",
-	}
-
-	//send your transaction
-	paymenLink, err1 := snapMidtransGo.RequestSnapMidtrans(postData)
-	if err1 != nil {
-		panic(err1.Error())
-	}
-
-	fmt.Println(paymenLink)
-
-	//send your transaction
-	dataPayment, err2 := snapMidtransGo.GetTransaction(postData)
-	if err2 != nil {
-		panic(err2.Error())
-	}
-
-	fmt.Println(dataPayment)
-}
-```
