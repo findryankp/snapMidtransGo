@@ -29,7 +29,7 @@ func main() {
 	}
 
 	//send your transaction
-	paymenLink, err1 := snapMidtransGo.RequestSnapMidtrans(postData)
+	paymenLink, err1 := snapMidtransGo.SandboxRequestSnapMidtrans(postData)
 	if err1 != nil {
 		panic(err1.Error())
 	}
@@ -37,7 +37,7 @@ func main() {
 	fmt.Println(paymenLink)
 
 	//get data from your transaction
-	dataPayment, err2 := snapMidtransGo.GetTransaction(postData)
+	dataPayment, err2 := snapMidtransGo.SandboxGetTransaction(postData)
 	if err2 != nil {
 		panic(err2.Error())
 	}
@@ -74,10 +74,10 @@ snapMidtransGo.GetTransaction(postData)
 - Sandbox
 ```go
 //request transaction
-snapMidtransGo.SanboxRequestSnapMidtrans(postData)
+snapMidtransGo.SandboxRequestSnapMidtrans(postData)
 
 //get status transaction
-snapMidtransGo.SanboxGetTransaction(postData)
+snapMidtransGo.SandboxGetTransaction(postData)
 ```
 
 

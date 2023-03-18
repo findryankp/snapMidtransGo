@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 )
 
-func SanboxRequestSnapMidtrans(postData DataPostMidtrans) (string, error) {
+func SandboxRequestSnapMidtrans(postData DataPostMidtrans) (string, error) {
 	stringBody, errBody := stringBody(postData)
 	if errBody != nil {
 		return "", errBody
@@ -17,7 +17,7 @@ func SanboxRequestSnapMidtrans(postData DataPostMidtrans) (string, error) {
 	return postDataTransaction(link, encodedString, dataBody)
 }
 
-func SanboxGetTransaction(postData DataPostMidtrans) (map[string]any, error) {
+func SandboxGetTransaction(postData DataPostMidtrans) (map[string]any, error) {
 	baseUrl := "https://api.sandbox.midtrans.com/v2"
 	link := baseUrl + "/" + postData.OrderId + "/status"
 	encodedString := base64.StdEncoding.EncodeToString([]byte(postData.ServerKey))
