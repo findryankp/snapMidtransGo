@@ -6,7 +6,7 @@ Simple package to connect your golang app with midtrans.
 
 ## Import
 ```shell
-go get github.com/Findryankp/snapMidtransGo
+go get -u github.com/Findryankp/snapMidtransGo
 ```
 
 ## Example
