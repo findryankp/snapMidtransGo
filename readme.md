@@ -1,9 +1,6 @@
 # Simple Snap Midtrans - Golang
 Simple package to connect your golang app with midtrans.
 
-**Development by:** 
-- Findryankp
-
 ## Import
 ```shell
 go get -u github.com/Findryankp/snapMidtransGo@latest
@@ -101,3 +98,8 @@ bad request
 4. Server Key
    - if you use sandbox, choose sandbox server key
    - likewise if you choose production choose server key production
+   
+## Development by
+[![Findryankp](https://img.shields.io/badge/Findryankp-grey?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Findryankp)
+[![findryankp](https://img.shields.io/badge/findryankp-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Findryankp/)
+
