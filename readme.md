@@ -1,12 +1,14 @@
 # Simple Snap Midtrans - Golang
+
+## 💫 About
 Simple package to connect your golang app with midtrans.
 
-## Import
+##  🚀 Import
 ```shell
 go get -u github.com/Findryankp/snapMidtransGo@latest
 ```
 
-## Example
+## 👨🏽‍💻 Example
 ```go
 import (
 	"fmt"
@@ -43,7 +45,7 @@ func main() {
 }
 ```
 
-## Post your data
+## 🎯 Post your data
 all data must be required
 
 ```go
@@ -78,7 +80,7 @@ snapMidtransGo.SandboxGetTransaction(postData)
 ```
 
 
-## Return data
+## 🚀 Return data
 success
 ```json
 {
@@ -91,7 +93,7 @@ bad request
     "error message"
 }
 ```
-## Get your server key from Midtrans
+## 👨🏽‍💻 Get your server key from Midtrans
 1. Login
 2. Setting
 3. Access Key
@@ -99,7 +101,7 @@ bad request
    - if you use sandbox, choose sandbox server key
    - likewise if you choose production choose server key production
    
-## Development by
+## 😎 Development by
 [![Findryankp](https://img.shields.io/badge/Findryankp-grey?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Findryankp)
 [![findryankp](https://img.shields.io/badge/findryankp-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Findryankp/)
 
